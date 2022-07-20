@@ -10,13 +10,13 @@ Dựa trên các bản phân phối, chương trình, các gói phần mềm ri�
 ```
 Một cách khác là sử dụng tiện ích `which`. Vi dụ: Để tìm chính xác vị trí của chương trình `python` trong file system
 ```sh
-$ which python
+$ which python3
 
 ```
 Nếu vẫn không tìm thấy thì ta có thể sử dụng `whereis pyhon`, bởi vì nó tìm kiếm trong phạm vi rộng hơn các thư mục hệ thống
 ```sh
 $ whereis python
-python: /usr/bin/python3.6 /usr/bin/python3.6m /usr/lib/python3.7 /usr/lib/python2.7 /usr/lib/python3.6 /etc/python2.7 /etc/python3.6 /usr/local/lib/python3.6 /usr/include/python3.6m /usr/share/python
+python: /usr/bin/python3.8 /usr/lib/python2.7 /usr/lib/python3.8 /usr/lib/python3.9 /etc/python3.8 /usr/local/lib/python3.8
 ```
 ## Truy cập thư mục
 Các command hữu ích cho việc điều hướng thư mục
