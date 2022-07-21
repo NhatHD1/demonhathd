@@ -70,9 +70,9 @@ Command `ln` có thể sử dụng để tạo `hard link` hoặc `soft link`, c
 
 	$ ln -s file1.txt file4.txt
 	$ ls -li file*
-	26088401 -rw-r--r-- 2 ngocquang ngocquang 4 Thg 1 26 22:52 file1.txt
-	26088401 -rw-r--r-- 2 ngocquang ngocquang 4 Thg 1 26 22:52 file2.txt
-	26088412 lrwxrwxrwx 1 ngocquang ngocquang 9 Thg 1 26 22:54 file4.txt -> file1.txt
+	416579 -rw-rw-r-- 2 nhathd nhathd 42 Jul 21 08:38 file1.txt
+        416577 lrwxrwxrwx 1 nhathd nhathd  8 Jul 21 08:56 file4.txt -> file.txt
+        416579 -rw-rw-r-- 2 nhathd nhathd 42 Jul 21 08:38 file.txt
   
 Ở đây `file4.txt` không còn xuất hiện như tệp thông thường nữa, nó là một điểm trỏ tới `file1.txt` và cũng có số `inode` khác nhau (cột đầu tiên), quyền sẽ luôn là `lrwxrwxrwx`. Chúng cực kỳ tiện lợi khi có thể dễ dàng sửa đổi để trỏ tới các điểm khác. Một cách dễ dàng tạo shortcut từ thư mục home của bạn cho một đường dẫn dài là tạo một symbolic link.
 
