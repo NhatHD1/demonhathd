@@ -51,20 +51,20 @@ Command `ln` có thể sử dụng để tạo `hard link` hoặc `soft link`, c
 
 ### Giả sử có file1.txt và tạo hard link là file2.txt
 	
-	cat >file1.txt
+	cat >file.txt
 
-	$ ln file1.txt file2.txt
+	$ ln file.txt file1.txt
 ### Kiểm tra sự tồn tại của hai file này.
 
 	$ ls -l file*
-	-rw-r--r-- 2 ngocquang ngocquang 4 Thg 1 26 22:52 file1.txt
-	-rw-r--r-- 2 ngocquang ngocquang 4 Thg 1 26 22:52 file2.txt
+	-rw-rw-r-- 2 nhathd nhathd 42 Jul 21 08:38 file1.txt
+        -rw-rw-r-- 2 nhathd nhathd 42 Jul 21 08:38 file.txt
 
 ### Thêm `option -i` ta sẽ thấy được ở cột đầu tiên là số `i-node`, và hai số này giống hệt nhau tức là đang cùng trỏ tới một vùng nhớ
 
 	$ ls -li file*
-	26088401 -rw-r--r-- 2 ngocquang ngocquang 4 Thg 1 26 22:52 file1.txt
-	26088401 -rw-r--r-- 2 ngocquang ngocquang 4 Thg 1 26 22:52 file2.txt
+	416579 -rw-rw-r-- 2 nhathd nhathd 42 Jul 21 08:38 file1.txt
+        416579 -rw-rw-r-- 2 nhathd nhathd 42 Jul 21 08:38 file.txt
 
 ### `Symbolic` or `Soft links` được tạo với `option -s` như sau:
 
