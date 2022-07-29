@@ -45,16 +45,22 @@ Lưu ý: một số điểm cần lưu ý khi mount:</br>
 
 Lệnh `df -Th` sẽ hiển thị thông tin về các hệ thống tập tin được gắn bao gồm các thống kê kiểu và cách sử dụng về không gian hiện đang sử dụng và sẵn có.</br>
 ```sh
-Filesystem     Type      Size  Used Avail Use% Mounted on
-udev           devtmpfs  3,9G     0  3,9G   0% /dev
-tmpfs          tmpfs     795M  1,9M  793M   1% /run
-/dev/sdb2      ext4      457G   19G  416G   5% /
-tmpfs          tmpfs     3,9G   15M  3,9G   1% /dev/shm
-tmpfs          tmpfs     5,0M  4,0K  5,0M   1% /run/lock
-tmpfs          tmpfs     3,9G     0  3,9G   0% /sys/fs/cgroup
-/dev/sdb1      vfat      511M  6,1M  505M   2% /boot/efi
-tmpfs          tmpfs     795M   16K  795M   1% /run/user/121
-tmpfs          tmpfs     795M   40K  795M   1% /run/user/1000
+Filesystem                        Type      Size  Used Avail Use% Mounted on
+udev                              devtmpfs  933M     0  933M   0% /dev
+tmpfs                             tmpfs     196M  1.3M  194M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4      9.8G  5.6G  3.8G  60% /
+tmpfs                             tmpfs     977M     0  977M   0% /dev/shm
+tmpfs                             tmpfs     5.0M     0  5.0M   0% /run/lock
+tmpfs                             tmpfs     977M     0  977M   0% /sys/fs/cgroup
+/dev/loop2                        squashfs   44M   44M     0 100% /snap/snapd/14978
+/dev/loop1                        squashfs   62M   62M     0 100% /snap/core20/1581
+/dev/loop3                        squashfs   68M   68M     0 100% /snap/lxd/22753
+/dev/loop4                        squashfs   68M   68M     0 100% /snap/lxd/21835
+/dev/loop5                        squashfs   47M   47M     0 100% /snap/snapd/16292
+/dev/sda2                         ext4      1.5G  209M  1.2G  16% /boot
+tmpfs                             tmpfs     196M     0  196M   0% /run/user/1000
+/dev/loop6                        squashfs   62M   62M     0 100% /snap/core20/1587
+
 ```
 # Thư mục HOME
 
