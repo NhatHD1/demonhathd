@@ -44,11 +44,11 @@ Phân tích lệnh trên: đầu tiên bỏ toàn bộ quyền cho cả 3 nhóm(
 Có một số cách khác nhau để sử dụng lệnh `chmod`. Ví dụ: để cho phép chủ sở hữu quyền thực thi
 
 ```sh
-$ ls -l test1
--rw-rw-r-- 1 joy caldera 1601 Mar 9 15:04 test1
-$ chmod u+x test1
-$ ls -l test1
--rwxrw-r-- 1 joy caldera 1601 Mar 9 15:04 test1
+$ ls -l file1.txt
+-rw-rw-r-- 2 nhathd nhathd 39 Jul 22 01:01 file1.txt
+$ chmod u+x file1.txt
+$ ls -l file1.txt
+-rwxrw-r-- 2 nhathd nhathd 39 Jul 22 01:01 file1.txt
 ```
 
 Loại cú pháp này có thể khó gõ và ghi nhớ, vì vậy, người ta thường sử dụng một cách viết tắt cho phép bạn thiết lập tất cả các quyền trong một bước. Điều này được thực hiện với một thuật toán đơn giản, và một chữ số duy nhất đủ để xác định tất cả ba bit quyền cho mỗi thực thể. Chữ số này là tổng của
