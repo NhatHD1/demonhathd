@@ -127,6 +127,7 @@ File cấu hình sudo nằm ở:
 
 Dòng `%sudo ALL=(ALL:ALL) ALL` có nghĩa là `group sudo` có quyền thực thi tất cả các lệnh. Muốn `user` có quyền của `group sudo` thì thêm vào nhóm này. Ví dụ thêm `group uet` để các thành viên đều có quyền thực thi tất cả các lệnh thì thêm dòng `%uet ALL=(ALL:ALL) ALL`
 
-Lệnh tạo 1 group: `groupadd uet` sau đó thêm user abc vào group này: `usermod -G uet abc`
+Lệnh tạo 1 group: `groupadd uet` sau đó thêm user abc vào group này: `usermod -G uet nhathd
+`
 
-Kiểm tra lại xem mình đã trong group đó chưa: `groups abc`
+Kiểm tra lại xem mình đã trong group đó chưa: `groups nhathd`
