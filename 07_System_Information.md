@@ -4,21 +4,21 @@
 ```sh
 $ cat /etc/*release
 DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=18.04
-DISTRIB_CODENAME=bionic
-DISTRIB_DESCRIPTION="Ubuntu 18.04.1 LTS"
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.4 LTS"
 NAME="Ubuntu"
-VERSION="18.04.1 LTS (Bionic Beaver)"
+VERSION="20.04.4 LTS (Focal Fossa)"
 ID=ubuntu
 ID_LIKE=debian
-PRETTY_NAME="Ubuntu 18.04.1 LTS"
-VERSION_ID="18.04"
+PRETTY_NAME="Ubuntu 20.04.4 LTS"
+VERSION_ID="20.04"
 HOME_URL="https://www.ubuntu.com/"
 SUPPORT_URL="https://help.ubuntu.com/"
 BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-VERSION_CODENAME=bionic
-UBUNTU_CODENAME=bionic
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
 ```
 *Lệnh này sẽ cho chúng ta thông tin về tên hệ điều hành, phiên bản và distro đang dùng và một số các thông tin trợ giúp khác.*
 
