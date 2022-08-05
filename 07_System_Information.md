@@ -25,9 +25,9 @@ UBUNTU_CODENAME=focal
 Command `uname -a` dùng cho cả Ubuntu với CentOS
 ```sh
 $ uname -a
-Linux Admin 4.15.0-39-generic #42-Ubuntu SMP Tue Oct 23 15:48:01 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+Linux server 5.4.0-122-generic #138-Ubuntu SMP Wed Jun 22 15:00:31 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
 ```
-*Lệnh này show ra đầy đủ các thông tin của kernel như phiên bản kernel là `4.15.0-39-generic`, 32bit hay 64bit*
+*Lệnh này show ra đầy đủ các thông tin của kernel như phiên bản kernel là `5.4.0-122-generic`, 32bit hay 64bit*
 
 Có thể dùng các tùy chọn khác để show ra từng thông tin một</br>
 ```sh
