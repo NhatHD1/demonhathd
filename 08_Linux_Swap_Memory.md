@@ -11,7 +11,7 @@ Có hai phương pháp swap space:</br>
 ```sh
 # swapon -s
 Filename                                Type            Size    Used    Priority
-/dev/dm-0                               partition       4079612 0       -1
+/swap.img                               file            2010108 0       -2
 ```
 
 Mỗi dòng liệt kê một phân vùng trao đổi riêng biệt được hệ thống sử dụng. Một đặc thù của các swux trên linux là nếu bạn gắn hai (hoặc nhiều hơn) không gian trao đổi (tốt nhất là trên hai thiết bị khác nhau) với cùng một ưu tiên, linux chia các hoạt động trao đổi giữa chúng. Điều này chuyển thành một sự gia tăng đáng chú ý về hiệu suất. Để thêm phân vùng trao đổi vào hệ thống của bạn, trước tiên bạn phải chuẩn bị phân vùng đó.
