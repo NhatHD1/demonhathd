@@ -3,11 +3,11 @@
 Linux là một hệ điều hành đa người dùng, nơi nhiều người dùng có thể đăng nhập cùng một lúc. Lệnh `who` liệt kê những người dùng hiện đang đăng nhập. Để xác định người dùng hiện tại, hãy sử dụng lệnh `whoami`
 ```sh
 # who -a
-           system boot  2015-02-17 13:28
-LOGIN      tty1         2015-02-17 13:28               761 id=tty1
-root     + pts/0        2015-02-17 13:29   .         12379 (10.10.10.246)
-           run-level 3  2015-02-17 13:29
-root     + pts/1        2015-02-17 17:37   .         18762 (10.10.10.246)
+           system boot  2022-08-15 07:56
+           run-level 5  2022-08-15 07:56
+nhathd   - tty1         2022-08-15 07:58 02:57        1275
+nhathd   + pts/0        2022-08-15 07:58   .          1303 (192.168.145.1)
+
 ```
 Linux sử dụng **groups** để tổ chức **user**. Groups là tập hợp các tài khoản có quyền được chia sẻ nhất định. Thành viên của groups được quản lý thông qua tệp `/etc/group`, hiển thị danh sách các nhóm và thành viên của nhóm. Theo mặc định, mọi người dùng đều thuộc về **default groups** hoặc **primary groups**. Khi user đăng nhập, user sẽ được thiết lập làm thành viên của group chính của họ và tất cả các thành viên đều có các quyền hạn giống nhau. Permission trên các file và thư mục có thể được sửa đổi theo cấp group.</br>
 Tất cả User Linux được chỉ định một **User ID** duy nhất, **uid**, là một số nguyên, cũng như một hoặc nhiều Groups ID, gid, bao gồm một ID mặc định giống với User ID. Trong lịch sử, RedHat dựa trên distro bắt đầu uid bắt đầu từ 500. Bản phân phối khác bắt đầu từ 1000. Những con số này được kết hợp với tên thông qua tập tin `/etc/passwd` và `/etc/group`. Các nhóm được sử dụng để thiết lập một nhóm người dùng có chung mục đích, quyền truy cập và bảo mật. Quyền truy cập vào tệp và thiết bị được cấp trên cơ sở người dùng và nhóm mà họ thuộc về.</br>
