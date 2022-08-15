@@ -31,7 +31,8 @@ sudo dd if=/dev/sda2 of=/var/swapfile bs=1M count=4194304
 Kiểm tra số phân vùng swap trên hệ thống, dùng lệnh swapon -s:
 ```sh
 $ swapon -s
-Filename				Type		Size	Used	Priority
-/dev/sda5                              	partition	1046524	0	-1
+Filename                                Type            Size    Used    Priority
+/swap.img                               file            2009084 1036    -2
+
 ```
 
