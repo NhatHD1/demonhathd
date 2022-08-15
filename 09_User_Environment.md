@@ -13,31 +13,38 @@ Linux sử dụng **groups** để tổ chức **user**. Groups là tập hợp 
 Tất cả User Linux được chỉ định một **User ID** duy nhất, **uid**, là một số nguyên, cũng như một hoặc nhiều Groups ID, gid, bao gồm một ID mặc định giống với User ID. Trong lịch sử, RedHat dựa trên distro bắt đầu uid bắt đầu từ 500. Bản phân phối khác bắt đầu từ 1000. Những con số này được kết hợp với tên thông qua tập tin `/etc/passwd` và `/etc/group`. Các nhóm được sử dụng để thiết lập một nhóm người dùng có chung mục đích, quyền truy cập và bảo mật. Quyền truy cập vào tệp và thiết bị được cấp trên cơ sở người dùng và nhóm mà họ thuộc về.</br>
 Chỉ `user root` mới có thể thêm và xóa người dùng và nhóm. Việc thêm một user mới được thực hiện bằng lệnh `useradd` và loại bỏ một user hiện có được thực hiện bằng lệnh `userdel`. Ở dạng đơn giản nhất, một tài khoản cho user mới sẽ được thực hiện như sau:</br>
 ```sh
-# useradd user1
-# cat /etc/passwd | grep user1
-adriano:x:1000:1000::/home/adriano:/bin/bash
-# ls -lrta /home/adriano/
-total 16
--rw-r--r--. 1 adriano adriano 231 Sep 26 03:53 .bashrc
--rw-r--r--. 1 adriano adriano 193 Sep 26 03:53 .bash_profile
--rw-r--r--. 1 adriano adriano  18 Sep 26 03:53 .bash_logout
-drwxr-xr-x. 3 root    root     20 Feb 17 17:48 ..
--rw-------. 1 adriano adriano   9 Feb 17 17:49 .bash_history
-drwx------. 2 adriano adriano  79 Feb 17 17:49 .
+# useradd nhat1
+# cat /etc/passwd | grep nhat1
+nhat1:x:1001:1001::/home/nhat1:/bin/sh
+# ls -lrta /home/nhathd/
+total 32
+-rw-r--r-- 1 nhathd nhathd  807 Feb 25  2020 .profile
+-rw-r--r-- 1 nhathd nhathd 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 nhathd nhathd  220 Feb 25  2020 .bash_logout
+drwxr-xr-x 3 root   root   4096 Aug 14 00:05 ..
+drwx------ 2 nhathd nhathd 4096 Aug 14 00:06 .ssh
+drwx------ 2 nhathd nhathd 4096 Aug 14 00:06 .cache
+-rw-r--r-- 1 nhathd nhathd    0 Aug 14 00:06 .sudo_as_admin_successful
+-rw------- 1 nhathd nhathd   52 Aug 15 07:58 .Xauthority
+drwxr-xr-x 4 nhathd nhathd 4096 Aug 15 07:58 .
 ```
 Mặc định thiết lập thư mục chính của User là `/home/user1`, điền nó với một số tệp cơ bản và đặt default shell thành `/bin/bash`.</br>
 Xóa tài khoản người dùng bằng cách nhập:
 ```sh
 # userdel adriano
 # cat /etc/passwd | grep adriano
-# ls -lrta /home/adriano/
-total 16
--rw-r--r--. 1 1000 1000 231 Sep 26 03:53 .bashrc
--rw-r--r--. 1 1000 1000 193 Sep 26 03:53 .bash_profile
--rw-r--r--. 1 1000 1000  18 Sep 26 03:53 .bash_logout
-drwxr-xr-x. 3 root root  20 Feb 17 17:48 ..
--rw-------. 1 1000 1000   9 Feb 17 17:49 .bash_history
-drwx------. 2 1000 1000  79 Feb 17 17:49 .
+# ls -lrta /home/nhathd/
+total 32
+-rw-r--r-- 1 nhathd nhathd  807 Feb 25  2020 .profile
+-rw-r--r-- 1 nhathd nhathd 3771 Feb 25  2020 .bashrc
+-rw-r--r-- 1 nhathd nhathd  220 Feb 25  2020 .bash_logout
+drwxr-xr-x 3 root   root   4096 Aug 14 00:05 ..
+drwx------ 2 nhathd nhathd 4096 Aug 14 00:06 .ssh
+drwx------ 2 nhathd nhathd 4096 Aug 14 00:06 .cache
+-rw-r--r-- 1 nhathd nhathd    0 Aug 14 00:06 .sudo_as_admin_successful
+-rw------- 1 nhathd nhathd   52 Aug 15 07:58 .Xauthority
+drwxr-xr-x 4 nhathd nhathd 4096 Aug 15 07:58 .
+
 ```
 Tuy nhiên, điều này sẽ để nguyên thư mục gốc. Điều này có thể hữu ích nếu nó là tạm thời không hoạt động. Để xóa thư mục chính trong khi xóa tài khoản, bạn cần sử dụng tùy chọn liên quan.
 ```sh
