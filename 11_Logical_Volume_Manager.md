@@ -126,7 +126,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 Dùng lệnh `ls /dev/sd*` để liệt kê các ổ đĩa bắt đầu bằng `sd`
 ```sh
 $ ls /dev/sd*
-/dev/sda  /dev/sda1  /dev/sda2  /dev/sda5  /dev/sdb
+/dev/sda  /dev/sda1  /dev/sda2  /dev/sda3
 ```
 Ở đây, ta sẽ thấy có một ổ `sdb` mới được gắn vào và chưa nằm trong logical volume
 
