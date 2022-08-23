@@ -7,6 +7,7 @@ Ta có thể thay đổi nó:
 ```sh 
 root@ip-172-31-22-1:~# echo $PS1
 \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
+
 root@ip-172-31-22-1:~# export PS1='[\u@\h \W(customt)]# '
 [root@ip-172-31-22-1 ~(customt)]# echo $PS1
 [\u@\h \W(customt)]#
